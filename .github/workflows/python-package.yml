@@ -23,11 +23,13 @@ jobs:
       run: |
         git clone https://github.com/ImageMagick/ImageMagick.git ImageMagick-7.0.10
         cd ImageMagick-7.0.10
-        ./configure
+        mkdir ~opt
+        
+        ./configure --prefix=~/opt
         make
         make install
         ldconfig /usr/local/lib
-        identify -version
+        
     - name: run sample
       run: |
         python3 sample.py
