@@ -26,7 +26,6 @@ jobs:
         ./configure --prefix=${HOME}/opt
         make
         sudo make install
-        sudo ldconfig /usr/local/lib
         
     - name: run sample
       run: |
