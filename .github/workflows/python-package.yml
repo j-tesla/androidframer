@@ -22,7 +22,6 @@ jobs:
         python-version: 3.6
     - name: Install imagemagick
       run: |
-        apt update
         apt build-dep imagemagick
         wget https://www.imagemagick.org/download/ImageMagick.tar.gz
         tar xf ImageMagick.tar.gz
