@@ -23,12 +23,10 @@ jobs:
       run: |
         git clone https://github.com/ImageMagick/ImageMagick.git ImageMagick-7.0.10
         cd ImageMagick-7.0.10
-        mkdir ${HOME}/opt
-        
         ./configure --prefix=${HOME}/opt
         make
-        make install
-        ldconfig /usr/local/lib
+        sudo make install
+        sudo ldconfig /usr/local/lib
         
     - name: run sample
       run: |
